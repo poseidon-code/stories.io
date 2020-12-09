@@ -1,28 +1,4 @@
-import { useEffect, useState } from 'react'
-
-const Story = () => {
-    const [story, setStory] = useState({
-        title: '',
-        author: '',
-        story: '',
-        moral: '',
-    })
-
-    useEffect(() => {
-        ;(async () => {
-            const data = await fetch('https://shortstories-api.herokuapp.com/')
-                .then((res) => res.json())
-                .catch((err) => console.log(err))
-
-            setStory({
-                title: data.title,
-                author: data.author,
-                story: data.story,
-                moral: data.moral,
-            })
-        })()
-    }, [])
-
+const Story = ({ story }) => {
     return (
         <div className='md:w-3/4 md:mx-auto w-full z-0'>
             <div className='py-28 px-6'>
