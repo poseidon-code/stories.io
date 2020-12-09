@@ -8,9 +8,9 @@ const Player = ({ story }) => {
         speak({
             text: `
             ${story.title}.
-            '\nby : '${story.author}.
-            '\n\n'${story.story}.
-            '\n\nMoral : '${story.moral}`,
+            by : ${story.author}.
+            ${story.story}.
+            Moral : ${story.moral}`,
         })
     }
 
