@@ -25,10 +25,6 @@ const Navbar = (props) => {
                     <button className={classes.button} onClick={() => props.toggleDarkmode()}>
                         {props.isDark ? <Dark /> : <Light />}
                     </button>
-
-                    <button className={classes.button} onClick={() => props.toggleOpenSettings()}>
-                        <Settings />
-                    </button>
                 </div>
             </div>
         </nav>
