@@ -1,4 +1,4 @@
-import { Dark, Light, Settings, Github, Api } from './Icons'
+import { Dark, Light, Github, Api } from './Icons'
 
 const Navbar = (props) => {
     const classes = {
@@ -22,7 +22,7 @@ const Navbar = (props) => {
                         <Github />
                     </a>
 
-                    <button className={classes.button} onClick={() => props.toggleDarkmode()}>
+                    <button className={classes.button} onClick={props.toggleDarkmode}>
                         {props.isDark ? <Dark /> : <Light />}
                     </button>
                 </div>

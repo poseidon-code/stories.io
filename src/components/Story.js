@@ -4,7 +4,9 @@ const Story = ({ story }) => {
             <div className='py-28 px-6'>
                 <h1 className='font-serif text-center md:text-5xl text-3xl text-purple-900 dark:text-purple-400'>{story.title}</h1>
 
-                <p className='font-sans text-right md:text-2xl text-lg mt-2 text-gray-500 dark:text-gray-400 pr-10'>- {story.author}</p>
+                <p className='font-sans text-right md:text-2xl text-lg mt-2 text-gray-500 dark:text-gray-400 pr-10'>
+                    {story.author && `- ${story.author}`}
+                </p>
 
                 <p className='font-sans mt-10 md:text-2xl text-xl text-center text-gray-900 dark:text-gray-300'>{story.story}</p>
 
