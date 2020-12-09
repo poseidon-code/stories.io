@@ -16,7 +16,10 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            opacity: ['disabled'],
+            pointerEvents: ['disabled'],
+        },
     },
     plugins: [],
 }
