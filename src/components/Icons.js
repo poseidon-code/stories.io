@@ -162,11 +162,13 @@ export const Play = () => (
         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 12a9 9 0 11-18 0 9 9 0 0118 0z' />
     </svg>
 )
+
 export const Pause = () => (
     <svg className='w-10 h-10 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z' />
     </svg>
 )
+
 export const Stop = () => (
     <svg className='w-10 h-10 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 12a9 9 0 11-18 0 9 9 0 0118 0z' />
@@ -175,6 +177,17 @@ export const Stop = () => (
             strokeLinejoin='round'
             strokeWidth={2}
             d='M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z'
+        />
+    </svg>
+)
+
+export const Refresh = () => (
+    <svg className='w-10 h-10 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={2}
+            d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
         />
     </svg>
 )
