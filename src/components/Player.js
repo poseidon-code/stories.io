@@ -1,7 +1,7 @@
-import { Pause, Play, Stop } from './Icons'
+import { Pause, Play, Refresh, Stop } from './Icons'
 import { useSpeechSynthesis } from 'react-speech-kit'
 
-const Player = ({ story }) => {
+const Player = ({ story, getStory }) => {
     const { speak, speaking, cancel } = useSpeechSynthesis()
 
     const play = () => {
@@ -21,6 +21,11 @@ const Player = ({ story }) => {
     return (
         <footer className='fixed w-full z-10 bottom-0 bg-purple-600 dark:bg-purple-800 py-3'>
             <div className='md:w-3/4 md:mx-auto w-full flex items-center justify-center space-x-4'>
+                <button
+                    className='p-2 rounded-full hover:bg-purple-500 dark:hover:bg-purple-600 transition duration-300 focus:outline-none'
+                    onClick={getStory}>
+                    <Refresh />
+                </button>
                 <button
                     className='p-2 rounded-full hover:bg-purple-500 dark:hover:bg-purple-600 transition duration-300 focus:outline-none'
                     onClick={speaking ? stop : play}>

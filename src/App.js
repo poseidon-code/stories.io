@@ -12,19 +12,21 @@ const App = () => {
         moral: '',
     })
 
-    useEffect(() => {
-        ;(async () => {
-            const data = await fetch('https://shortstories-api.herokuapp.com/')
-                .then((res) => res.json())
-                .catch((err) => console.log(err))
+    const getStory = async () => {
+        const data = await fetch('https://shortstories-api.herokuapp.com/')
+            .then((res) => res.json())
+            .catch((err) => console.log(err))
 
-            setStory({
-                title: data.title,
-                author: data.author,
-                story: data.story,
-                moral: data.moral,
-            })
-        })()
+        setStory({
+            title: data.title,
+            author: data.author,
+            story: data.story,
+            moral: data.moral,
+        })
+    }
+
+    useEffect(() => {
+        getStory()
     }, [])
 
     useEffect(() => {
@@ -47,7 +49,7 @@ const App = () => {
 
                 <Story story={story} />
 
-                <Player story={story} />
+                <Player story={story} getStory={getStory} />
             </div>
         </div>
     )
