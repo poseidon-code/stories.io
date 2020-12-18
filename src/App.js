@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Player from './components/Player'
+import Spinner from './components/Spinner'
 import Story from './components/Story'
 
 const App = () => {
     const [darkmode, setDarkmode] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [story, setStory] = useState({
         title: '',
         author: '',
@@ -13,6 +15,7 @@ const App = () => {
     })
 
     const getStory = async () => {
+        setLoading(true)
         const data = await fetch('https://shortstories-api.herokuapp.com/')
             .then((res) => res.json())
             .catch((err) => console.log(err))
@@ -23,6 +26,7 @@ const App = () => {
             story: data.story,
             moral: data.moral,
         })
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -47,7 +51,13 @@ const App = () => {
             <div className='relative min-h-screen w-full bg-gray-100 dark:bg-gray-900'>
                 <Navbar toggleDarkmode={toggleDarkmode} isDark={darkmode} />
 
-                <Story story={story} />
+                {loading ? (
+                    <div className='absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4'>
+                        <Spinner />
+                    </div>
+                ) : (
+                    <Story story={story} />
+                )}
 
                 <Player story={story} getStory={getStory} />
             </div>
