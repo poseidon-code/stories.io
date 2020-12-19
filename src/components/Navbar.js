@@ -1,4 +1,4 @@
-import { Dark, Light, Github, Api } from './Icons'
+import { Dark, Light, Github, Api, Code } from './Icons'
 
 const Navbar = (props) => {
     const classes = {
@@ -16,6 +16,14 @@ const Navbar = (props) => {
                         rel='noopener noreferrer'
                         className={classes.button}>
                         <Api />
+                    </a>
+
+                    <a
+                        href='https://github.com/poseidon-code/stories.io'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={classes.button}>
+                        <Code />
                     </a>
 
                     <a href='https://github.com/poseidon-code' target='_blank' rel='noopener noreferrer' className={classes.button}>
