@@ -59,7 +59,7 @@ const App = () => {
                     <Story story={story} />
                 )}
 
-                <Player story={story} getStory={getStory} />
+                <Player story={story} getStory={getStory} loading={loading} />
             </div>
         </div>
     )

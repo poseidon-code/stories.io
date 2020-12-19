@@ -1,7 +1,8 @@
 import { Pause, Play, Refresh, Stop } from './Icons'
 import { useSpeechSynthesis } from 'react-speech-kit'
+import { useEffect } from 'react'
 
-const Player = ({ story, getStory }) => {
+const Player = ({ story, getStory, loading }) => {
     const { speak, speaking, cancel } = useSpeechSynthesis()
 
     const play = () => {
@@ -16,6 +17,14 @@ const Player = ({ story, getStory }) => {
 
     const stop = () => {
         cancel()
+    }
+
+    useEffect(() => {
+        loading && stop()
+    }, [loading])
+
+    window.onbeforeunload = () => {
+        stop()
     }
 
     return (
