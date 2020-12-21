@@ -1,6 +1,6 @@
 import { Pause, Play, Refresh, Stop } from './Icons'
 import { useSpeechSynthesis } from 'react-speech-kit'
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 
 const Player = ({ story, getStory, loading }) => {
     const { speak, speaking, cancel } = useSpeechSynthesis()
@@ -15,13 +15,13 @@ const Player = ({ story, getStory, loading }) => {
         })
     }
 
-    const stop = () => {
+    const stop = useCallback(() => {
         cancel()
-    }
+    }, [cancel])
 
     useEffect(() => {
         loading && stop()
-    }, [loading])
+    }, [loading, stop])
 
     window.onbeforeunload = () => {
         stop()
