@@ -9,12 +9,7 @@ Check out the live build here: [stories.io](https://storiesio.netlify.app)
 The short stories can be accessed from the **shortstories-api** using the request URL : [https://shortstories-api.herokuapp.com](https://shortstories-api.herokuapp.com).\
 The required documentation on using the **shortstories-api** can be found here : [https://github.com/poseidon-code/shortstories-api](https://github.com/poseidon-code/shortstories-api)
 
-## Features
-
--   uses tailwindcss
--   automatically sets website theme to system theme
--   toggle between light and dark modes
--   refresh to get new story
+---
 
 ## Scripts
 
