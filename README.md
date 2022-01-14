@@ -1,15 +1,22 @@
-# stories&period;io ![Status](https://img.shields.io/badge/STATUS-active-brightgreen)
+<div align="center">
 
+![stories.io](./stories-io.jpg)
+
+![Status](https://img.shields.io/badge/STATUS-active-brightgreen)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3a9a4e4d-5658-4bd3-83bd-6e24405cb9f7/deploy-status)](https://app.netlify.com/sites/storiesio/deploys)
-![Framework](https://img.shields.io/badge/FRAMEWORK-ReactJS-blue)
 
-This is a website which uses **HTML5 Web Speech API** to read short stories fetched from an API call.\
-Check out the live build here: [stories.io](https://storiesio.netlify.app)
+[stories.io](https://storiesio.netlify.app) is a website which uses **HTML5 Web Speech API** to read short stories fetched from an API call.
 
-The short stories can be accessed from the **shortstories-api** using the request URL : [https://shortstories-api.herokuapp.com](https://shortstories-api.herokuapp.com).\
-The required documentation on using the **shortstories-api** can be found here : [https://github.com/poseidon-code/shortstories-api](https://github.com/poseidon-code/shortstories-api)
+These short stories can be accessed from the **shortstories-api** using the request URL : \
+[https://shortstories-api.herokuapp.com](https://shortstories-api.herokuapp.com)
+
+The required documentation on using the **shortstories-api** can be found here : \
+[https://github.com/poseidon-code/shortstories-api](https://github.com/poseidon-code/shortstories-api)
+
+</div>
 
 ---
+
 
 ## Scripts
 
@@ -25,12 +32,12 @@ The required documentation on using the **shortstories-api** can be found here :
 > `npm run eject` \
 > It will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them
 
+
 ## Acknowledgement
 
-[stories.io](https://storiesio.netlify.app) is made with [ReactJS](https://reactjs.org) using **create-react-app** and deployed on [Netlify](https://www.netlify.com).\
+[stories.io](https://storiesio.netlify.app) is made with [ReactJS](https://reactjs.org) and deployed on [Netlify](https://www.netlify.com).\
 All the icons are provided by [Heroicons](https://www.heroicons.com).\
-It uses [tailwindcss](https://tailwindcss.com) for styling all components.\
-[craco](https://github.com/gsoft-inc/craco) npm package from **gsoft-inc** is used to configure this website for special needs of the project.
+It uses [tailwindcss](https://tailwindcss.com) for styling all components.
 
 ---
 
