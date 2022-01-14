@@ -15,17 +15,11 @@ const Player = ({ story, getStory, loading }) => {
         })
     }
 
-    const stop = useCallback(() => {
-        cancel()
-    }, [cancel])
+    const stop = useCallback(() => { cancel() }, [cancel])
 
-    useEffect(() => {
-        loading && stop()
-    }, [loading, stop])
+    useEffect(() => { loading && stop() }, [loading, stop])
 
-    window.onbeforeunload = () => {
-        stop()
-    }
+    window.onbeforeunload = () => { stop() }
 
     return (
         <footer className='fixed w-full z-10 bottom-0 bg-purple-600 dark:bg-purple-800 py-3'>
@@ -41,9 +35,7 @@ const Player = ({ story, getStory, loading }) => {
                     {speaking ? <Pause /> : <Play />}
                 </button>
                 <button
-                    className={`${
-                        speaking ? '' : 'disabled:opacity-50 disabled:pointer-events-none'
-                    } p-2 rounded-full hover:bg-purple-500 dark:hover:bg-purple-600 transition duration-300 focus:outline-none  disabled:hover:bg-transparent`}
+                    className='disabled:opacity-50 disabled:pointer-events-none p-2 rounded-full hover:bg-purple-500 dark:hover:bg-purple-600 transition duration-300 focus:outline-none disabled:hover:bg-transparent'
                     disabled={speaking ? false : true}
                     onClick={stop}>
                     <Stop />
