@@ -29,9 +29,7 @@ const App = () => {
         setLoading(false)
     }
 
-    useEffect(() => {
-        getStory()
-    }, [])
+    useEffect(() => { getStory() }, [])
 
     useEffect(() => {
         if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
