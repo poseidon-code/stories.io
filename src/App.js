@@ -16,7 +16,7 @@ const App = () => {
 
     const getStory = async () => {
         setLoading(true)
-        const data = await fetch('https://shortstories-api.herokuapp.com/')
+        const data = await fetch('https://shortstories-api.onrender.com/')
             .then((res) => res.json())
             .catch((err) => console.log(err))
 
